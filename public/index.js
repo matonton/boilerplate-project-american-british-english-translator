@@ -1,4 +1,6 @@
 
+// button push calls translateHandler, which sends text area and locale to /api/translate as POST request
+
 const translateHandler = async () => {
   const textArea = document.getElementById("text-input");
   const localeArea = document.getElementById("locale-select");
@@ -27,5 +29,6 @@ const translateHandler = async () => {
   translatedArea.innerHTML = parsed.translation;
   return;
 };
+
 
 document.getElementById("translate-btn").addEventListener("click", translateHandler)
